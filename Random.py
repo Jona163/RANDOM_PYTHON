@@ -64,3 +64,13 @@ draw_clock()
         h = time.localtime().tm_hour
         m = time.localtime().tm_min
         s = time.localtime().tm_sec
+        
+        
+        
+
+
+        draw_hand(100, (h % 12) * 30 + m / 2)  # Hora
+        draw_hand(120, m * 6)  # Minuto
+        draw_hand(140, s * 6)  # Segundo
+        screen.update()
+        time.sleep(1)
