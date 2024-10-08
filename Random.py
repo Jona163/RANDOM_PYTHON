@@ -21,3 +21,12 @@ def graficar_seno():
     plt.ylabel('sin(x)')
     plt.legend()
     plt.show()
+    
+# Parte 2: Reloj analógico con turtle
+def reloj_turtle():
+    t = turtle.Turtle()
+    screen = turtle.Screen()
+    screen.bgcolor("black")
+    t.pensize(3)
+    t.shape("turtle")
+    screen.tracer(0)
