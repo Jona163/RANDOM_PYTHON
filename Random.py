@@ -101,3 +101,10 @@ def juego_pygame():
             y -= vel
         if keys[pygame.K_DOWN]:
             y += vel
+
+        screen.fill((0, 0, 0))
+        pygame.draw.rect(screen, (255, 0, 0), (x, y, 50, 50))
+        pygame.display.update()
+
+    pygame.quit()
+
