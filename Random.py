@@ -55,3 +55,12 @@ def draw_clock():
             t.goto(0, 0)
             
 draw_clock()
+
+
+
+    while True:
+        t.clear()
+        draw_clock()
+        h = time.localtime().tm_hour
+        m = time.localtime().tm_min
+        s = time.localtime().tm_sec
