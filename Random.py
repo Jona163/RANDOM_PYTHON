@@ -107,4 +107,19 @@ def juego_pygame():
         pygame.display.update()
 
     pygame.quit()
+# Ejecuta el gráfico primero
+graficar_seno()
+
+# Después inicia el reloj en turtle en paralelo con el juego en pygame
+import threading
+
+# Hilos para ejecutar turtle y pygame en paralelo
+turtle_thread = threading.Thread(target=reloj_turtle)
+pygame_thread = threading.Thread(target=juego_pygame)
+
+turtle_thread.start()
+pygame_thread.start()
+
+turtle_thread.join()
+pygame_thread.join()
 
