@@ -74,3 +74,15 @@ draw_clock()
         draw_hand(140, s * 6)  # Segundo
         screen.update()
         time.sleep(1)
+        
+        
+# Parte 3: Juego simple con pygame
+def juego_pygame():
+    pygame.init()
+
+    screen = pygame.display.set_mode((500, 500))
+    pygame.display.set_caption('Movimiento del cuadrado')
+
+    x, y = 250, 250
+    vel = 10
+    running = True
