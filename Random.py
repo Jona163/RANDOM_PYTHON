@@ -38,3 +38,18 @@ def draw_hand(length, angle):
         t.right(angle)
         t.pendown()
         t.forward(length)
+
+
+def draw_clock():
+        for i in range(12):
+            t.penup()
+            t.goto(0, 0)
+            t.setheading(90)
+            t.right(i * 30)
+            t.forward(150)
+            t.pendown()
+            t.forward(10)
+            t.penup()
+            t.forward(20)
+            t.write(str(i + 1), align="center", font=("Arial", 12, "normal"))
+            t.goto(0, 0)
