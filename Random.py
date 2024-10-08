@@ -9,3 +9,15 @@ import pygame
 import time
 import numpy as np
 import matplotlib.pyplot as plt
+
+# Parte 1: Gráfico de una función seno (con matplotlib)
+def graficar_seno():
+    x = np.linspace(-10, 10, 100)
+    y = np.sin(x)
+    
+    plt.plot(x, y, label='Seno')
+    plt.title('Gráfico de la función seno')
+    plt.xlabel('x')
+    plt.ylabel('sin(x)')
+    plt.legend()
+    plt.show()
