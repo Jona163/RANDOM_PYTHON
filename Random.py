@@ -21,7 +21,7 @@ def graficar_seno():
     plt.ylabel('sin(x)')
     plt.legend()
     plt.show()
-    
+
 # Parte 2: Reloj analógico con turtle
 def reloj_turtle():
     t = turtle.Turtle()
@@ -31,7 +31,7 @@ def reloj_turtle():
     t.shape("turtle")
     screen.tracer(0)
     
-def draw_hand(length, angle):
+    def draw_hand(length, angle):
         t.penup()
         t.goto(0, 0)
         t.setheading(90)
@@ -39,8 +39,7 @@ def draw_hand(length, angle):
         t.pendown()
         t.forward(length)
 
-
-def draw_clock():
+    def draw_clock():
         for i in range(12):
             t.penup()
             t.goto(0, 0)
@@ -53,10 +52,8 @@ def draw_clock():
             t.forward(20)
             t.write(str(i + 1), align="center", font=("Arial", 12, "normal"))
             t.goto(0, 0)
-            
-draw_clock()
 
-
+    draw_clock()
 
     while True:
         t.clear()
@@ -64,18 +61,13 @@ draw_clock()
         h = time.localtime().tm_hour
         m = time.localtime().tm_min
         s = time.localtime().tm_sec
-        
-        
-        
-
 
         draw_hand(100, (h % 12) * 30 + m / 2)  # Hora
         draw_hand(120, m * 6)  # Minuto
         draw_hand(140, s * 6)  # Segundo
         screen.update()
         time.sleep(1)
-        
-        
+
 # Parte 3: Juego simple con pygame
 def juego_pygame():
     pygame.init()
@@ -85,12 +77,13 @@ def juego_pygame():
 
     x, y = 250, 250
     vel = 10
-    running = while running:
+    running = True
+
+    while running:
         pygame.time.delay(50)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
@@ -107,6 +100,7 @@ def juego_pygame():
         pygame.display.update()
 
     pygame.quit()
+
 # Ejecuta el gráfico primero
 graficar_seno()
 
@@ -122,4 +116,3 @@ pygame_thread.start()
 
 turtle_thread.join()
 pygame_thread.join()
-
