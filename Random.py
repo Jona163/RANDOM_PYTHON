@@ -53,3 +53,5 @@ def draw_clock():
             t.forward(20)
             t.write(str(i + 1), align="center", font=("Arial", 12, "normal"))
             t.goto(0, 0)
+            
+draw_clock()
