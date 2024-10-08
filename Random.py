@@ -91,3 +91,13 @@ def juego_pygame():
             if event.type == pygame.QUIT:
                 running = False
 
+
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            x -= vel
+        if keys[pygame.K_RIGHT]:
+            x += vel
+        if keys[pygame.K_UP]:
+            y -= vel
+        if keys[pygame.K_DOWN]:
+            y += vel
