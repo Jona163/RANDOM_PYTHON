@@ -85,4 +85,9 @@ def juego_pygame():
 
     x, y = 250, 250
     vel = 10
-    running = True
+    running = while running:
+        pygame.time.delay(50)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
