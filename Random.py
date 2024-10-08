@@ -30,3 +30,11 @@ def reloj_turtle():
     t.pensize(3)
     t.shape("turtle")
     screen.tracer(0)
+    
+def draw_hand(length, angle):
+        t.penup()
+        t.goto(0, 0)
+        t.setheading(90)
+        t.right(angle)
+        t.pendown()
+        t.forward(length)
